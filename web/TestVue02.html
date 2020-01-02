@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+    <p v-if="seen">现在你能看到我了！</p>
+    <template v-if="ok">
+        <h1>菜鸟教程</h1>
+        <p>学的不仅是技术，更是梦想！</p>
+        <p>哈哈哈，打字辛苦啊！！！</p>
+    </template>
+    <button  @click="change">开关</button>
+</div>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            message:"Hello",
+            seen: true,
+            ok: true
+
+        },
+        methods:{
+            change:function () {
+                this.ok = !this.ok;
+            }
+        }
+    })
+</script>
+</body>
+</html>
